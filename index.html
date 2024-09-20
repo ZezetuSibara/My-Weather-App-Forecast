@@ -1,11 +1,59 @@
 ﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet" />
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
+    <title>Meteo App</title>
+</head>
+<body style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4Ndq_HPJropl9wNIWThvyjqlKK6WL2i8qGg&s'); background-size: cover; ">
+    <div class="weather-app">
+        <header>
+            <form class="search-form" id="search-form">
+                <input type="search"
+                       placeholder="Enter a city.."
+                       required
+                       id="search-form-input"
+                       class="search-form-input" />
+                <input type="submit" value="Search" class="search-form-button" />
+            </form>
+        </header>
+        <main>
+            <div class="weather-app-data">
+                <div>
+                    <h1 class="weather-app-city" id="city"></h1>
+                    <p class="weather-app-details">
+                        <span id="time">Tuesday 14:49</span>,
+                        <span id="description">scattered clouds</span>
+                        <br />
+                        Humidity: <strong id="humidity">66%</strong>, Wind:
+                        <strong id="wind-speed">3.13km/h</strong>
+                    </p>
+                </div>
+                <div class="weather-app-temperature-container">
+                    <div id="icon">🌤️</div>
+                    <div class="weather-app-temperature" id="temperature"></div>
+                    <div class="weatehr-app-unit">°C</div>
+                </div>
+            </div>
+        </main>
+
+
+        <footer>
+            <p>
+                This project was coded by
+                <a href="https://github.com/ZezetuSibara" target="_blank">Zezetu Sibara</a> and is
+                <a href="https://github.com/ZezetuSibara/My-Weather-App-Forecast" target="_blank">open-sourced on GitHub</a> and
+                <a href="https://zezetu-sibara-weather-app-forecast.netlify.app" target="_blank">hosted on Netlify</a>
+            </p>
+        </footer>
+    </div>
+    <script type="module" src="src/App.js"></script>
 </body>
 </html>
